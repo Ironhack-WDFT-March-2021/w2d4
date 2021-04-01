@@ -11,6 +11,7 @@ class Player {
         // width is the width of the canvas that is created on setup
         this.x = constrain(this.x, 0, (width - 100))
         image(this.image, this.x, this.y, this.width, this.height);
+        // if we wanna listen for key down we have to do it in the draw function
         // is 'w' pressed down
         if (keyIsDown(87)) {
             this.moveUp()
@@ -46,9 +47,11 @@ class Game {
     }
 
     preload() {
+        // this is to load the image
         this.player.image = loadImage('gustavo.png');
     }
     drawGame() {
+        // to clear the canvas every frame
         clear()
         this.player.draw()
     }
@@ -56,6 +59,8 @@ class Game {
 
 
 const game = new Game();
+
+// all the following functions are functions that p5 calls automatically
 
 function preload() {
     game.preload();
