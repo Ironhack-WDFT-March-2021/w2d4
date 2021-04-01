@@ -4,6 +4,7 @@ function setup() {
 }
 let x = 500
 let speed = 3;
+let player;
 function draw() {
     // console.log('drawing 🙃')
 
@@ -37,9 +38,19 @@ function draw() {
     }
     circle(x, 200, 50)
     // console.log(mouseX, mouseY)
+
+    // this renders an image (image, x, y, width, height)
+    image(player, 200, 200, 100, 100);
 }
 
 // this is used to preload assets - p 5 calls that function
 function preload() {
-    loadImage('gustavo.png')
+    player = loadImage('gustavo.png')
+}
+
+function keyPressed() {
+    console.log(keyCode)
+    if (keyCode === 39) {
+        // move player to the right
+    }
 }
