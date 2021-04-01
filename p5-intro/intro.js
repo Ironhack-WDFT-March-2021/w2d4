@@ -38,3 +38,8 @@ function draw() {
     circle(x, 200, 50)
     // console.log(mouseX, mouseY)
 }
+
+// this is used to preload assets - p 5 calls that function
+function preload() {
+    loadImage('gustavo.png')
+}
